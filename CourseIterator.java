@@ -12,8 +12,9 @@ public class CourseIterator implements Iterator{
    }
    
    public Object next(){
+     Object temp=students.get(position);
       position++;
-      return students.get(position);
+      return temp;
    }
    
    public boolean hasNext() {
