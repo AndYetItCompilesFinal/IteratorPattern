@@ -21,6 +21,7 @@ public class Course implements Iterable {
    }
    
    public Iterator iterator(){
-      return new CourseIterator(students);
+      CourseIterator c = new CourseIterator(students);
+      return c;
    }
 }

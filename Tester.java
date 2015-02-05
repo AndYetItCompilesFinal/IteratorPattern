@@ -4,7 +4,7 @@
    Tester uses a foreach loop to move through the list of Students
 */
 
-import java.lang.Iterable;
+import java.util.Iterator;
 
 public class Tester {
    public static void main(String[] args){

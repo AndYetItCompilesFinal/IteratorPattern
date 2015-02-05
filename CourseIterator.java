@@ -8,6 +8,7 @@ public class CourseIterator implements Iterator{
       
    public CourseIterator(LinkedList list){
       this.students = list;
+      this.position = 0;
    }
    
    public Object next(){
@@ -31,7 +32,7 @@ public class CourseIterator implements Iterator{
          System.out.println("You must do a next first.");
       }
       if(students.get(position-1) != null){   
-         students.remove(positon);
+         students.remove(position);
       }
    }   
 }
