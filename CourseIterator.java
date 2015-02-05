@@ -1,4 +1,5 @@
-import java.lang;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class CourseIterator implements Iterator{
    
@@ -11,11 +12,11 @@ public class CourseIterator implements Iterator{
    
    public Object next(){
       position++;
-      return list.get(position);
+      return students.get(position);
    }
    
    public boolean hasNext() {
-      int size = list.size();
+      int size = students.size();
       if(size == 0){
          return false;
       }else if(position == size){
@@ -29,8 +30,8 @@ public class CourseIterator implements Iterator{
       if(position <= 0) {
          System.out.println("You must do a next first.");
       }
-      if(list.get(position-1) != null){   
-         list.remove(positon);
+      if(students.get(position-1) != null){   
+         students.remove(positon);
       }
    }   
 }

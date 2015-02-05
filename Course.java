@@ -1,13 +1,15 @@
-import java.lang;
+import java.lang.Iterable;
+import java.util.Iterator;
+import java.util.LinkedList;
 
-public class Course implements Iterator {
+public class Course implements Iterable {
    LinkedList students;
 
    public Course(){
       students = new LinkedList();
    }
    
-   public addStudent(String name){
+   public boolean addStudent(String name){
       boolean added;
       added = students.add(name);
       if(added == true){
@@ -15,9 +17,10 @@ public class Course implements Iterator {
       }else{
          System.out.println("Student could not be added.");
       }
+      return added;
    }
    
-   public Iterator<T> iterator(){
+   public Iterator iterator(){
       return new CourseIterator(students);
    }
 }
